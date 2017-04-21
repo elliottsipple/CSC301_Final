@@ -5,7 +5,7 @@ Required elements: (70 pts)
 	- Two forms that support add/edit functionality
 	- At least one listing page that is searchable 
 	- Usage of session variables somehow in the application
-	- A database with at least 3 tables, 2 or which are related
+	- A database with at least 3 tables, 2 of which are related
 	- Use an SQL query with a JOIN statement
 	- Make use of an OOP class somewhere in the application
 	- Use a function or class method other than the constructor method
