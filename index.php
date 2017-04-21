@@ -42,6 +42,7 @@ $cars = searchCars($term, $database);
                     <a href="car.php?carid=<?php echo $car['carid'] ?>">View Car</a>
                 </p>
             <?php endforeach; ?>
+            <p><a href="form.php?action=add">Add a Car</a></p>
     
             <!--Print currently accessed by the current username-->
             <p>Currently logged in as: <?php echo $user->name ?></p>

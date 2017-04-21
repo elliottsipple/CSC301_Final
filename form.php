@@ -105,7 +105,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
         // remove current city info
         $sql = file_get_contents('sql/removeCities.sql');
         $params = array(
-            'carid' => carid
+            'carid' => $carid
         );
         $statement = $database->prepare($sql);
         $statement->execute($params);
@@ -117,9 +117,9 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
         foreach($car_cities as $city){
             $params = array(
                 'carid' => $carid,
-                'cityid' => $cityid
+                'cityid' => $city
             );
-            $statement->execute($sql);
+            $statement->execute($params);
         };
     }
     // redirect to car listing page
@@ -141,9 +141,9 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
             <div class="form-element">
                 <label>CarID:</label>
                 <?php if($action == 'add') : ?>
-                    <input type="text" name="carid" class="textbox" value="<?php echo $car['carid'] ?>" />
+                    <input type="number" name="carid" class="textbox" value="<?php echo $car['carid'] ?>" />
                 <?php else : ?>
-                    <input readonly type="text" name="carid" class="textbox" value="<?php echo $car['carid'] ?>" />
+                    <input readonly type="number" name="carid" class="textbox" value="<?php echo $car['carid'] ?>" />
                 <?php endif; ?>
             </div>
             <div class="form-element">
@@ -192,4 +192,3 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
     </div>
 </body>
 </html>
-    

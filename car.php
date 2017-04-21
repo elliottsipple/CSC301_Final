@@ -6,14 +6,12 @@ include('functions.php');
 
 // Get the carID from the url
 $carid = get('carid');
-print($carid);
 
 // Get a list of cars from the database with the carID passed in the URL
 $sql = file_get_contents('sql/getCar.sql');
 $params = array(
 	'carid' => $carid
 );
-print_r($params);
 $statement = $database->prepare($sql);
 $statement->execute($params);
 $cars = $statement->fetchAll(PDO::FETCH_ASSOC);
