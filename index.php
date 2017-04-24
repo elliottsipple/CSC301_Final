@@ -18,8 +18,6 @@ $cars = searchCars($term, $database);
     <head>
         <meta charset="utf-8">
 	    <title>Cars</title>
-        <meta name="description" content="The HTML5 Herald">
-        <meta name="author" content="SitePoint">
 
         <link rel="stylesheet" href="css/style.css">
     </head>
@@ -37,7 +35,7 @@ $cars = searchCars($term, $database);
                     <?php echo $car['color']; ?><br />
                     Miles: <?php echo $car['miles']; ?><br />
                     Price: $<?php echo $car['price']; ?><br />
-                    <img src="<?php echo $car['image']; ?>" alt="<?php echo $car['model']; ?>"><br />
+                    <img src="/csc301/sipplee1/final<?php echo $car['image']; ?> " alt="<?php echo $car['model']; ?>" style="width:500px;height:250px;" ><br />
                     <a href="form.php?action=edit&carid=<?php echo $car['carid'] ?>">Edit Car Information</a><br />
                     <a href="car.php?carid=<?php echo $car['carid'] ?>">View Car</a>
                 </p>

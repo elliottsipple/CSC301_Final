@@ -3,7 +3,7 @@ An individual final project that will allow for the use of learned concepts this
 Required elements: (70 pts)
 	- A configuration file that connects to a database, includes functions.php and autoloads classes
 	- Two forms that support add/edit functionality
-	- At least one listing page that is searchable 
+	- At least one listing page that is searchable
 	- Usage of session variables somehow in the application
 	- A database with at least 3 tables, 2 of which are related
 	- Use an SQL query with a JOIN statement
